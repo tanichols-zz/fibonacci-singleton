@@ -1,5 +1,5 @@
 class Fibonacci {
-  constructor() {
+  constructor () {
     if (!Fibonacci.instance) {
       // Private members with default values
       let iterations = 0
@@ -17,7 +17,7 @@ class Fibonacci {
       }
 
       const compute = () => {
-        let remaining = size - sequence.length;
+        let remaining = size - sequence.length
         for (let i = 0; i < remaining; i++) {
           const next = prior + current
           sequence.push(next)
