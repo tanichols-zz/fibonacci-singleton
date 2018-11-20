@@ -6,8 +6,8 @@ compute optimized utility to generate Fibonacci sequence(s). The library is impl
 1. Import the utility into your codebase
 
 ```
-import Fibonacci from 'fibonacci'
-const Fibonacci = require('fibonacci')
+import Fibonacci from 'fibonacci-singleton'
+const Fibonacci = require('fibonacci-singleton')
 ```
 
 2. Generate Sequences
