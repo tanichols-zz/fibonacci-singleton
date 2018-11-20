@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/tanichols/fibonacci.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Thomas Nichols <ta.nichols@outlook.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tanichols/fibonacci/issues"
   },
