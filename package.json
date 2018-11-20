@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/tanichols/fibonacci.git"
   },
+  "keywords": [
+    "Fibonacci",
+    "Utility",
+    "Singleton"
+  ],
   "author": "Thomas Nichols <ta.nichols@outlook.com>",
   "license": "MIT",
   "bugs": {
