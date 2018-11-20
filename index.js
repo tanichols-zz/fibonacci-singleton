@@ -1,11 +1,17 @@
 class Fibonacci {
   constructor(size = 2) {
-    this.iterations = 0
-    this.size = 2
-    this.prior = 0
-    this.current = 1
-    this.sequence = [0, 1]
-    this.setSize(size)
+    if (!Fibonacci.instance) {
+      this.iterations = 0
+      this.size = 2
+      this.prior = 0
+      this.current = 1
+      this.sequence = [0, 1]
+      this.setSize(size)
+
+      Fibonacci.instance = this
+    }
+
+    return Fibonacci.instance
   }
 
   setSize(size) {
@@ -34,6 +40,4 @@ class Fibonacci {
   }
 }
 
-const FibonacciObj = new Fibonacci(2);
-
-module.exports = FibonacciObj
+module.exports = Fibonacci
