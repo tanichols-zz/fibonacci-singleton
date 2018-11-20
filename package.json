@@ -1,6 +1,6 @@
 {
   "name": "fibonacci",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Compute optimized utility for generating fibonacci sequence(s)",
   "main": "fibonacci.js",
   "scripts": {
