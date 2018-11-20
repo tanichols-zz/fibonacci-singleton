@@ -1,5 +1,6 @@
 const Fibonacci = require('./index')
-const FibonacciObj = new Fibonacci(2);
+const FibonacciObj = new Fibonacci();
+Object.freeze(FibonacciObj)
 
 describe('fibonacci', () => {
   it('should render 5 item(s) in the fibonacci sequence', () => {
@@ -19,12 +20,12 @@ describe('fibonacci', () => {
     expect(output).toEqual([0])
   })
   it('should have processed 7 iterations', () => {
-    const iterations = FibonacciObj.iterations
+    const iterations = FibonacciObj.getIterations()
     expect(iterations).toEqual(7)
   })
   it('Should be a singleton', () => {
     const FibonacciObj2 = new Fibonacci(2)
-    const size = FibonacciObj2.size
+    const size = FibonacciObj2.getSize()
     expect(size).toEqual(9)
   })
 })

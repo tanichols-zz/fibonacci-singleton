@@ -1,42 +1,48 @@
 class Fibonacci {
-  constructor(size = 2) {
+  constructor() {
     if (!Fibonacci.instance) {
-      this.iterations = 0
-      this.size = 2
-      this.prior = 0
-      this.current = 1
-      this.sequence = [0, 1]
-      this.setSize(size)
+      // Private members with default values
+      let iterations = 0
+      let size = 2
+      let prior = 0
+      let current = 1
+      let sequence = [0, 1]
 
+      // Private methods
+      const setSize = (newSize) => {
+        if (size < newSize) {
+          size = newSize
+          compute()
+        }
+      }
+
+      const compute = () => {
+        let remaining = size - sequence.length;
+        for (let i = 0; i < remaining; i++) {
+          const next = prior + current
+          sequence.push(next)
+          prior = current
+          current = next
+          iterations++
+        }
+      }
+
+      // Public methods
+      this.getSize = () => size
+
+      this.getIterations = () => iterations
+
+      this.getSequence = (length) => {
+        setSize(length)
+
+        return sequence.slice(0, length)
+      }
+
+      // Singleton Instantiation
       Fibonacci.instance = this
     }
 
     return Fibonacci.instance
-  }
-
-  setSize(size) {
-    if (this.size < size) {
-      this.size = size
-      this.compute()
-    }
-  }
-
-  compute() {
-    let remaining = this.size - this.sequence.length;
-    for (let i = 0; i < remaining; i++) {
-      const next = this.prior + this.current
-      this.sequence.push(next)
-      this.prior = this.current
-      this.current = next
-
-      this.iterations++
-    }
-  }
-
-  getSequence(length) {
-    this.setSize(length)
-
-    return this.sequence.slice(0, length)
   }
 }
 
