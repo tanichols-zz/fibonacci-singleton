@@ -1,0 +1,19 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "description": "Compute optimized utility for generating fibonacci sequence(s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanichols/fibonacci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanichols/fibonacci/issues"
+  },
+  "homepage": "https://github.com/tanichols/fibonacci#readme"
+}
