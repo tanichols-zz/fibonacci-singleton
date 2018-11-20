@@ -46,4 +46,7 @@ class Fibonacci {
   }
 }
 
-module.exports = Fibonacci
+const FibonacciObj = new Fibonacci()
+Object.freeze(FibonacciObj)
+
+module.exports = FibonacciObj

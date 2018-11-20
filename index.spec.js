@@ -1,31 +1,28 @@
-const Fibonacci = require('./index')
-const FibonacciObj = new Fibonacci();
-Object.freeze(FibonacciObj)
+const Fibonacci1 = require('./index')
+const Fibonacci2 = require('./index')
 
 describe('fibonacci', () => {
   it('should render 5 item(s) in the fibonacci sequence', () => {
-    const output = FibonacciObj.getSequence(5)
+    const output = Fibonacci1.getSequence(5)
     expect(output).toEqual([0, 1, 1, 2, 3])
   })
   it('should render 7 item(s) in the fibonacci sequence', () => {
-    const output = FibonacciObj.getSequence(7)
+    const output = Fibonacci1.getSequence(7)
     expect(output).toEqual([0, 1, 1, 2, 3, 5, 8])
   })
   it('should render 9 item(s) in the fibonacci sequence', () => {
-    const output = FibonacciObj.getSequence(9)
+    const output = Fibonacci1.getSequence(9)
     expect(output).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21])
   })
   it('should render 1 item(s) in the fibonacci sequence', () => {
-    const output = FibonacciObj.getSequence(1)
+    const output = Fibonacci1.getSequence(1)
     expect(output).toEqual([0])
   })
   it('should have processed 7 iterations', () => {
-    const iterations = FibonacciObj.getIterations()
+    const iterations = Fibonacci1.getIterations()
     expect(iterations).toEqual(7)
   })
   it('Should be a singleton', () => {
-    const FibonacciObj2 = new Fibonacci(2)
-    const size = FibonacciObj2.getSize()
-    expect(size).toEqual(9)
+    expect(Fibonacci1).toBe(Fibonacci2)
   })
 })
