@@ -1,4 +1,4 @@
-# Fibonacci
+# Fibonacci-Singleton
 compute optimized utility to generate Fibonacci sequence(s). The library is implemented as a singleton and will not compute values that have already been computed.
 
 ## Usage
