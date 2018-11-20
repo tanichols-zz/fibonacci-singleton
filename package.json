@@ -2,9 +2,10 @@
   "name": "fibonacci",
   "version": "1.0.0",
   "description": "Compute optimized utility for generating fibonacci sequence(s)",
-  "main": "index.js",
+  "main": "fibonacci.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watch"
   },
   "repository": {
     "type": "git",

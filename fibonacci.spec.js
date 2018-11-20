@@ -1,5 +1,5 @@
-const Fibonacci1 = require('./index')
-const Fibonacci2 = require('./index')
+const Fibonacci1 = require('./fibonacci')
+const Fibonacci2 = require('./fibonacci')
 
 describe('fibonacci', () => {
   it('should render 5 item(s) in the fibonacci sequence', () => {
